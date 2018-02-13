@@ -1,6 +1,6 @@
 {
   "name": "gl-react-negative",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Universal gl-react negative effect",
   "main": "lib/index.js",
   "scripts": {
