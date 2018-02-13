@@ -31,5 +31,8 @@
   "bugs": {
     "url": "https://github.com/gre/gl-react-negative/issues"
   },
-  "homepage": "https://github.com/gre/gl-react-negative#readme"
+  "homepage": "https://github.com/gre/gl-react-negative#readme",
+  "dependencies": {
+    "prop-types": "^15.6.0"
+  }
 }
