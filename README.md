@@ -4,15 +4,13 @@
 
 ## Props
 
-- `children` **(required)**: the content to negate.
-- `factor`: optionally the intensity of the effect. 1.0 is normal negative effect. 0.0 completely disable the effect.
+* `children` **(required)**: the content to negate.
+* `factor`: optionally the intensity of the effect. 1.0 is normal negative effect. 0.0 completely disable the effect.
 
 ## Usage Examples
 
 ```js
-var Negative = require("gl-react-negative").Negative;
-// or
-import {Negative} from "gl-react-negative";
+import { Negative } from "gl-react-negative";
 ```
 
 ```html

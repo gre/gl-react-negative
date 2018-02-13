@@ -1,3 +1,2 @@
-module.exports = {
-  Negative: require("./Negative")
-};
+import Negative from "./Negative";
+export { Negative };

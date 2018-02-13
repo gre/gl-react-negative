@@ -1,9 +1,8 @@
-const GL = require("gl-react");
-const React = require("react");
-
+import React from "react";
+import { Node, Shaders } from "gl-react";
 import PropTypes from "prop-types";
 
-const shaders = GL.Shaders.create({
+const shaders = Shaders.create({
   Negative: {
     frag: `precision highp float;
 varying vec2 uv;
@@ -17,22 +16,24 @@ void main () {
   }
 });
 
-module.exports = GL.createComponent(
-  ({ children: t, factor }) =>
-  <GL.Node
-    shader={shaders.Negative}
-    uniforms={{
-      t,
-      factor
-    }}
-  />,
-{
-  displayName: "Negative",
-  defaultProps: {
-    factor: 1
-  },
-  propTypes: {
+export default class Negative extends Component {
+  static propTypes = {
     children: PropTypes.any.isRequired,
     factor: PropTypes.number
+  };
+  static defaultProps = {
+    factor: 1
+  };
+  render() {
+    const { children: t, factor } = this.props;
+    return (
+      <Node
+        shader={shaders.Negative}
+        uniforms={{
+          t,
+          factor
+        }}
+      />
+    );
   }
-});
+}
